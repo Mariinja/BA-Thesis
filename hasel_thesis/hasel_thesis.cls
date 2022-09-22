@@ -298,8 +298,8 @@
   \chapter*{Abstract}}
   {}
 
-\newenvironment{zusammenfassung}{%
-  \chapter*{Zusammenfassung}}{}
+\newenvironment{Summary}{%
+  \chapter*{Summary}}{}
 
 \newenvironment{acknowledgements}{%
   \chapter*{Acknowledgements}}{}
