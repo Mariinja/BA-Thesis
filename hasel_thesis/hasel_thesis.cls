@@ -26,6 +26,7 @@
 \LoadClass[10pt,twoside,a4paper,fleqn]{book}
 \RequirePackage{hasel}
 \RequirePackage{fancyhdr}
+\RequirePackage{comment}
 
 %% paper dimensions and lengths
 \setlength{\textwidth}{15cm}
