@@ -27,6 +27,8 @@
 \RequirePackage{hasel}
 \RequirePackage{fancyhdr}
 \RequirePackage{comment}
+\RequirePackage[most]{tcolorbox}
+
 
 %% paper dimensions and lengths
 \setlength{\textwidth}{15cm}
@@ -182,6 +184,8 @@
  \noindent Department of Informatics, University of Zurich%
 }
 
+
+
 %% chapter definition
 \renewcommand\chapter{\if@openright
                         \clearpage\thispagestyle{empty}\cleardoublepage
@@ -304,6 +308,5 @@
 
 \newenvironment{acknowledgements}{%
   \chapter*{Acknowledgements}}{}
-
 
 \endinput
