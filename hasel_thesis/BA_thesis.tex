@@ -471,32 +471,6 @@ Discussion of how the design supports the user's goals and meets their needs, su
 Discussion of how the design has been tested and validated with users, including any user research or testing methods used
 
 
-\subsection{Initial Break Plan}
-
-- How do i generate the initial break plan
-- What different people do we have
-- How can the user adjust this plan
-- What is the theory behind it
-
-
- 
-The Break Scheduler starts with an initial break plan. To achieve this plan, the user will be asked to define their key values, such as the preferred break interval and break duration. They can also decide to go with the default, 50-10, as various papers recommend. (add paper here!). Additionally, they will be asked to fill out specific settings questions as if they would like to include a lunch break and state the lunch break duration. A list of predefined break activities will be shown, from which the user can choose what to incorporate and what not. This will help to cancel already break activities which are not feasible or preferred. After this initial questionnaire, the break schedule will be defined for the first time. All activities in every category are same likely to be chosen for the breaks as there is no data yet. 
-
-\subsection{Adapting to User's Needs}
-
-- How is the system working?
-- what are trigger values?
-- what is the weight of the trigger values?
-- Why did i choose this concept? (Show theory)
-
-The generated break schedule is synchronized with your chosen calendar interface (Outlook or Google Calendar). This synchronization allows the Break Scheduler to ensure no breaks are scheduled during meetings. Additionally, all generated breaks will be added to your calendar, and a reminder will be displayed for morning and evening reports. A crucial point for the Break Scheduler is the integration of the tool into the user's work environment and the integration with tools already in use, so it does not require much maintenance in the tool itself. For this reason, all break adjustments are made in the personal Outlook or Google calendar, synchronized with the Break Scheduler. The user can adjust the start time and duration or delete the break if new appointments come up during the day.
-The goal is to help the user find their best fit and allow manual adjustments to stay flexible throughout the day by working with a single tool, their personal calendar. 
-
-At the end of each day, the user will be asked to rate the break interval and duration. If the timing was rated as good, the interval and duration will stay the same for the next day. However, when the duration or timing is too short or too long, it will be adjusted relative to the current value and will be extended or respectively reduced. This enables the user to learn more about their fitting break duration and interval and enforces the user to reflect on the break habit in the evening. This easy yet effective mechanism enables Break Schedule to adjust the user's needs and raise awareness.
-
-Before and after each break, there is a brief self-reflection in which the user assesses their energy and attention levels and physical well-being. These insights and an assessment of the activity yield the experience value of that break. This value is added to the activity as well as the overall and daily category value. The experience value will help the scheduler find good and effective breaks in the next iterations. However, The suggested breaks are only suggestions. The user does not need to perform this activity. The rule-based system suggests one activity and one randomized activity from the whole list. The user can select one of the two. If both do not fit his needs, he can always choose an activity from the entire list, enabling the user to adjust to his current needs. The selected activity is the one which will be rated and will get the assigned experience value.
-
-The setup described above has two personalizing factors. First, the rule-based system adjusts all three key values of a break, timing, duration and activity, over time. The timing and duration will be adjusted each evening when rating the interval and duration of the break. Additionally, depending on the user's calendar, the break timing and duration will be adjusted to fit the day. The selection of the activities will be adjusted through the experience values accumulated during the work day. Secondly, all three key values of a break can be adjusted by the user, enabling them to adjust the scheduled breaks to the current needs and changes during the day.
 
 \end{comment}
 
@@ -513,7 +487,7 @@ were used to ensure the user experience and human-centred interaction (HCI). How
 As shown in figure \ref{fig:user-flow} the user will initially start with the application setup. At this state, the user will set up the Break Schedule for the first time, so they need to connect their personal calendar and define their break interval and duration. Each user will be asked to select eight activities they want to experiment with. This was defined for the purpose of this study as the usage duration is limited to one to two weeks, and all selected activities need to be tried once to activate the primary value of the rule-based method. The selected activities are the activities which the rule-based system will consider. These are the first personalising steps. Adjusting the break interval and duration enables the user to adjust to their timing preferences, while selecting the activities enables them to adjust to their activity preferences. These values can be adjusted afterwards but not as part of the primary user flow. 
 
 
-When the first break schedule is complete, the primary user flow will start, with an iteration cycle of one day. Each morning the user will be notified to answer the morning report, which is a short energy report. During the day, the user will also be notified, as shown in \ref{fig:notification}, to take breaks and fill out the before and after break reports, which the rule-based system will use to calculate the experience values. The reminder via notification is an essential factor of the Break Scheduler, as many knowledge workers with high job control struggle to remember to take breaks \cite{McLean.2001}. During the work day, a short notice meeting or a deadline might be approaching, making it essential to reschedule breaks. When working, the user might be on his calendar many times a day. The design choice to enable changes to the break schedule only in the calendar app allows the user to work with his known medium and reduce the application used simultaneously. During the day, the interaction with the Break Scheduler is limited to the notification and the before and after self-reports, which pop up when clicking on the notification. The goal is to minimise the attention needed to interact with the application and minimise the interruption. 
+When the first break schedule is complete, the primary user flow will start, with an iteration cycle of one day. Each morning the user will be notified to answer the morning report, which is a short energy report. During the day, the user will also be notified, as shown in \ref{fig:notification}, to take breaks and fill out the before and after break reports, which the rule-based system will use to calculate the experience values. The reminder via notification is an essential factor of the Break Scheduler, as many knowledge workers with high job control struggle to remember to take breaks \cite{McLean.2001}. During the work day, a short notice meeting or a deadline might be approaching, making it essential to reschedule breaks. When working, the user might be on his calendar many times a day. The design choice to enable changes to the break schedule only in the calendar app allows the user to work with his known medium and reduce the application used simultaneously. The goal is to help the user find their best fit and allow manual adjustments to stay flexible throughout the day by working with a single tool, their personal calendar. During the day, the interaction with the Break Scheduler is limited to the notification and the before and after self-reports, which pop up when clicking on the notification. The goal is to minimise the attention needed to interact with the application and minimise the interruption. 
 
 \begin{figure}[htp]
     \centering
@@ -522,7 +496,7 @@ When the first break schedule is complete, the primary user flow will start, wit
     \label{fig:notification}
 \end{figure}
 
-When it is time to take a break, the Break Scheduler will send a notification which will open the before Break Report. As discussed in the evaluation of the break section \ref{evaluation_break}, it can be challenging to quantify personal resources such as energy, attention capacity or physical well-being. A slider bar for the evaluation was used to give the participant the possibility to make a detailed rating. For simplification reasons, the step points of the slider are 5 points, which makes it easier for the user to rate their resources. For the enjoyability rating of the activity, shown in figure \ref{fig:rating}, an emoticon rating should motivate the user to place a rating.
+When it is time to take a break, the Break Scheduler will send a notification which will open the before Break Report. Before and after each break, there is a brief self-reflection in which the user assesses their energy and attention levels and physical well-being. These insights and an assessment of the activity yield the experience value of that break. This value is added to the activity as well as the overall and daily category value. The experience value will help the rule-based method find good and effective breaks in the next iterations. However, The suggested breaks are only suggestions. The user does not need to perform this activity. The rule-based system suggests one activity and one randomized activity from the whole list. The user can select one of the two. If both do not fit their needs, the user can always choose an activity from the entire list, enabling them to adjust to their current needs. The selected activity is the one which will be rated and will get the assigned experience value. As discussed in the evaluation of the break section \ref{evaluation_break}, it can be challenging to quantify personal resources such as energy, attention capacity or physical well-being. A slider bar for the evaluation was used to give the participant the possibility to make a detailed rating. For simplification reasons, the step points of the slider are 5 points, which makes it easier for the user to rate their resources. For the enjoyability rating of the activity, shown in figure \ref{fig:rating}, an emoticon rating should motivate the user to place a rating.
 
 \begin{figure}[htp]
     \centering
@@ -533,7 +507,8 @@ When it is time to take a break, the Break Scheduler will send a notification wh
 
 During the break, the user should be reminded that they are on a break; therefore, a small window will be opened in the lower right corner, showing the remaining time and the suggested activity. This window is, per design, unmovable, not closable and always in front of everything. The only way to close this window is when ending the break by clicking on the "end break" button. This measure should force the user to take a break and prevent thoughts as "only one last mail", which lead to a switch of task and not taking a break. When the break is ended, the End Break Report will open.
 
-Each evening the user will fill out the evening report, reflecting on the used energy and rating the interval and duration of the breaks. The rule-based system will consider the rating of the break interval and duration before generating the new schedule. More will be explained in the section \ref{rule-based-method-implementation}. Afterwards, the user will be asked for the start and end of their work day and preferred lunch break, ensuring all daily specific inputs are confirmed. Per default, the values of the last time will be shown, enabling users with similar schedules to continue faster. When the schedule for the next day is generated, the daily cycle will start again.
+
+Each evening the user will fill out the evening report, reflecting on the used energy and rating the interval and duration of the breaks. The rule-based system will consider the rating of the break interval and duration before generating the new schedule. More information to the adjustment of the interval and duration is explained in the section \ref{rule-based-method-implementation}. Afterwards, the user will be asked for the start and end of their work day and preferred lunch break, ensuring all daily specific inputs are confirmed. Per default, the values of the last time will be shown, enabling users with similar schedules to continue faster. When the schedule for the next day is generated, the daily cycle will start again.
 
 The users are welcome to visit the dashboard or review their activities or reports in between the primary user flow. The user can see all critical information at a glance on the home screen, shown in figure \ref{fig:dashboard}.
 
@@ -566,12 +541,12 @@ Discussion of how the functionality supports the user's goals and meets their ne
 Explanation of any features or functionality that have been added or omitted based on user feedback and testing
 Discussion of how the functionality has been tested and validated, including any methods used for testing and debugging
 \end{comment}
-This section will cover the src section of figure \ref{fig:architectur}. This section includes all the main functionalities of the Break Scheduler. All features of the Break Scheduler can be grouped into four groups: personalisation, Rule-Based Method, Calendar Integration and Database.
+This section will cover the src section of figure \ref{fig:architectur}. It includes all the main functionalities of the Break Scheduler. All features of the Break Scheduler can be grouped into four subjects: Personalisation, Rule-Based Method, Calendar Integration and Database.
 
 \subsection{Personalisation} \label{personalization}
-Personalization of the Break Schedule is a key factor. All 3 key features of a break: timing, duration and activity need there to be adjustable. That is why the break interval and duration are defined by the user in the setup phase of the application. But also, afterwards, the user needs to be able to adjust these values. Different features of the Break Scheduler enable the user to adjust interval and duration to their needs.
+Personalization of the Break Schedule is a crucial factor. All three key features of a break: timing, duration, and activity need, therefore, to be adjustable. That is why the user in the setup phase of the application defines the break interval and duration. Nevertheless, also, afterwards, the user needs to be able to adjust these values. Different features of the Break Scheduler enable the user to adjust interval and duration to their needs.
 
-One way to adjust the interval and duration is by the Rule-Based-System at the end of each day, before scheduling the breaks for the next day. This adjustments are only small and in relation to the current time interval, but are part of the main user flow during the day. Further details will be discussed int the section \ref{rule-based-method-implementation}.
+One way to adjust the interval and duration is by the rule-based system at the end of each day before scheduling the breaks for the next day. These adjustments depend on the user input in the evening report and are part of the primary user flow during the day. When the interval is rated as "too long", the rule-based system will decrease the interval for the following break schedule. Similar holds for the break duration. Further details will be discussed in implementing the rule-based method section \ref{rule-based-method-implementation}.
 
 \begin{figure}[htp]
     \centering
@@ -580,14 +555,14 @@ One way to adjust the interval and duration is by the Rule-Based-System at the e
     \label{fig:adjust_timing}
 \end{figure}
 
-Another way to adjust the interval and duration is by hand adjusting Interval and duration. In figure \ref{fig:adjust_timing}, the window to adjust the timing and duration is shown. The new interval and duration will be considered by the next generation of breaks.
+Another way to adjust the interval and duration is by hand. Figure \ref{fig:adjust_timing} shows the window to adjust the timing and duration. The next generation of breaks will consider the new interval and duration.
 
-As the generated breaks are synchronised with the calendar of the user. The break timing can also be adjusted in the calendar itself, which ensures flexibility during the day, and helps to user to adjust when the planning needs to change. More will be discussed in the \ref{calendar_integration}.
+As the generated breaks are synchronised with the calendar of the user. The break timing can also be adjusted in the calendar, which ensures flexibility during the day and helps users adjust the break planning. More will be discussed in the Calendar Integration section \ref{calendar_integration}.
 
 
 \subsection{Rule-Based Method Implementation} \label{rule-based-method-implementation}
 
-The Rule-Based Method contains three main features: the generation of the breaks, updating of the experience values and adjusting the break interval and duration.
+The rule-based method contains three main features: the generation of the breaks, updating the experience values and adjusting the break interval and duration.
 
 \begin{figure}[htp]
     \centering
@@ -595,17 +570,17 @@ The Rule-Based Method contains three main features: the generation of the breaks
     \caption{Rule-Based Method Process}
     \label{fig:rule-based_method}
 \end{figure}
-\textbf{Generation of Breaks.} For the generation of breaks, in figure \ref{fig:rule-based_method} the process of the rule-based system is visualised. As input, the method needs the interval and duration, activities and categories which are saved by the application. The user needs to enter the specific start and end of the day as well as the lunch break duration. The meeting for the selected day will be automatically gathered by the application. When all the input is available, the system will start by saving the morning report at the start of the day. After that, the first break start time is defined as the start of the day plus the interval. Now the method first checks whether the timing with the break duration is in a meeting. If so, it reschedules the timing after the meeting, updates the break duration, as it could already be lunchtime, and checks again if the break is in a meeting or not. If the planned break is not in a meeting, the activity will be selected. Each activity has a minimum and maximum duration, as well as an experience value. The minimum and maximum duration is used when selecting an activity for a certain break duration, as it is for example, impossible to make outdoor training in a 5min break. The category also has an overall experience value but also a morning, lunch and evening experience value. This helps us with the selection of the category depending on the daytime. Before the activity is selected by the rule-based method, the category with the highest experience value for this daytime will be selected. Afterwards, the activity from this category with the highest experience value, which fits the given duration, will be selected. However, as long as there is a category or activity that was not yet tried out, this will be selected. When the activity is selected, one random activity out of the whole list will be selected. This random activity should add some randomness to the process and reduce possible bias from the rule-based system. When the suggested and the random activities have been selected, the break with timing, duration, suggested, and random activity will be saved, and it will be checked whether the end of the day is already achieved. During the last interval of the day, there are no breaks scheduled to enable the user to finalize his work. When the last interval of the day is already achieved, a short break for the evening report will be scheduled. All scheduled breaks will be saved in the database, but also and most importantly all breaks will be scheduled in the calendar of the user. The process is finished when the user can see all breaks in his personal calendar or in the calendar window in the application.
+\textbf{Generation of Breaks.} For the generation of breaks, in figure \ref{fig:rule-based_method} the process of the rule-based system is visualised. As input, the method needs the interval and duration, activities and categories saved by the application. The user must enter the specific start and end of the day and the duration of the lunch break. The application will automatically gather the meeting for the selected day. When all the input is available, the system will schedule a short break for the morning report at the start of the day. After that, the first break start time is defined as the start of the day plus the interval. Now the method first checks whether the timing with the break duration is in a meeting. If so, it reschedules the timing after the meeting, updates the break duration, as it could already be lunchtime, and checks again if the break is in a meeting. The activity will be selected if the planned break is not in a meeting. Each activity has a minimum and maximum duration and an experience value. The minimum and maximum duration is used when selecting an activity for a certain break duration, as it is, for example, impossible to do outdoor training in a 5min break. The category also has an overall experience value and a morning, lunch and evening experience value. This helps the rule-based method with the selection of the category depending on the daytime. Before the activity is selected by the rule-based method, the category with the highest experience value for this daytime will be selected. Afterwards, the activity from this category with the highest experience value, which fits the given duration, will be selected. However, if a category or activity was not yet tried out, this will be selected first. When the activity is selected, one random activity out of the whole list will be selected . This random activity should add some randomness to the process and reduce possible bias from the rule-based system. When the suggested and the random activities have been selected, the break with all necessary information will be saved, and it will be checked whether the end of the day is already achieved. During the last interval of the day, no breaks are scheduled to enable the user to finalize his work. When the last interval of the day is already achieved, a short break for the evening report will be scheduled. All scheduled breaks will be saved in the database, but most importantly, all breaks will be scheduled in the user's calendar. The process is finished when the user can see all breaks in his personal calendar or the calendar window in the application.
 
-\textbf{Update the Experience Values.} Before and after each break the user will fill out a short self-report, which asks for the selected activity and about the current state of their energy (e), attention level (a) and physical well-being (p). After the break the user also rates the activity (r). In order to calculate the experience value, the rule-based system calculates the following:
+\textbf{Update the Experience Values.} Before and after each break, the user will fill out a short self-report, which asks for the selected break activity and about the current state of their energy (e), attention level (a) and physical well-being (p). After the break, the user also rates the activity (r). The following calculation will be executed by the rule-based method to define the experience value of the break:
 
 $$ rawExpValue = \frac{e_1- e_0}{10} + \frac{a_1- a_0}{10} + \frac{p_1-p_0}{10} + \frac{r}{10} -5$$
 
 $$ expValue = Round(rawExpValue/5)*5$$
 
-As e, a, p and r are values between 0-100, the difference will be divided by 10. As the r value should also be negative if the activity was not perceived, 5 will be substrate. Therefore the value r can go from -5 to 5. The rawExpValue is raw expectation value, which needs to be rounded to the next number that is divisible by 5, in order to group more activity together when selecting the activity with the highest experience value. This value will be added to the experience value of the activity, and also to the overall and daily specific experience value of all related categories of the selected activity.
+As e, a, p and r are values between 0-100, the differences will be divided by 10. As the value r should also be negative if the activity was not perceived well, 5 will be subtracted. Therefore the value r can go from -5 to 5. The rawExpValue is the raw experience value, which needs to be rounded to the next number that is divisible by 5 in order to group more activities together. This value will be added to the experience value of the selected activity and the overall and daily specific experience value of all related categories of the selected activity.
 
-\textbf{Update Break Interval and Duration.} Each evening the user will be asked to fill out the evening report where they rate their used energy as well as the break interval and break duration. The user can select whether the interval was good, too long or too short, the same holds for the break duration. According to the user input the following calculation will be done:
+\textbf{Update Break Interval and Duration.} Each evening, the user will be asked to fill out the evening report where they rate their used energy and the break interval and duration. The user can select whether the interval is suitable, too long or too short; the same holds for the break duration. According to the user input, the following calculation will be done:
 
 "Too Short" for interval (i): $ i = i + Round(i/10) $
 
@@ -615,43 +590,28 @@ As e, a, p and r are values between 0-100, the difference will be divided by 10.
 
 "Too Long" for duration (d): $ d = d - Round(d/3) $
 
-This simple calculation was chosen in order to ensure a relative change, and helps the user to find a specific target time, as the both values can step by step level off to the target time. The chosen relative change is higher (1/3 instead of 1/10)  than the interval, as the duration values is normally smaller and the same relative change (1/10) would not really have a impact on the break duration: e.g 10min break duration would be 11min if the duration was too short. With the higher relative change the new duration is 15min. This new interval and duration will than be used to create the new Breaks.
+This simple calculation was chosen to ensure a relative change and helps the user to find a specific target time, as both values can, step by step, level off to the target time. The chosen relative change of the duration is higher (1/3 instead of 1/10)  than the interval, as the duration values usually are smaller and the same relative change (1/10) would not have an impact on the break duration: e.g. 10min break duration would be 11min if the duration was too short. With the greater relative change, the new duration is 15min. This new interval and duration will be used to create the new break schedule.
 
 
 \subsection{Calendar Integration} \label{calendar_integration}
 
-In order to integrate the calendar into the Break Scheduler two APIs were used: Google API and MS Graph API. Both APIs ensure the automatic synchronisation between the Break Schedule and the personal calendar of the user. 
+In order to integrate the calendar into the Break Scheduler, two APIs were used: Google API and MS Graph API. Both APIs ensure the automatic synchronisation between the Break Schedule and the user's personal calendar. 
 
-\textbf{Google API.} Google provides a API to connect their Google calendar using their OAuth2 Client API. For a new Client needed to be opened in the google cloud. As the Break Scheduler is still in the test phase, the user needed to be entered manually into the google client, enabling them to connect the Break Scheduler with the Google Calendar. When selecting the google Calendar, the user will be redirected to the Google login screen, where they can login and give the application permission to read and adjust calendar data. The API will generate a token which will be saved by the Break Scheduler, ensuring that the user only needs to login once.
+\textbf{Google API.} Google provides an API to connect their Google calendar using their OAuth2 Client API. A new Client needs to be opened in the google cloud to use the OAuth Client. As the Break Scheduler is still in the test phase, the user must be entered manually into the Google client, enabling them to connect it with the Google calendar. When selecting the Google calendar, the user will be redirected to the Google login screen, where they can log in and give the application permission to read and adjust calendar data. The API will generate a token saved by the Break Scheduler, ensuring that the user only needs to log in once.
 
-\textbf{MS Graph API.} Similar to the google API, the first step to use the MS Graph API is to register an app in the Azure directory. When a user selects the Microsoft Calendar, they will be redirected to the Microsoft login page, were they can login and give the app the permission to read and change calendar data. The API gives back a token which is saved by the Break Scheduler. In contrast to the Google API the user need to login each time the application is started new.
+\textbf{MS Graph API.} Similar to the google API, the first step to using the MS Graph API is registering an app in the Azure directory. When users select the Microsoft Calendar, they will be redirected to the Microsoft login page, where they can log in and give the app permission to read and change calendar data. The API gives back a token which is saved by the Break Scheduler. However, in contrast to the Google API, the user needs to log in each time the application is started new.
 
-Each minute the Break Scheduler will send a request to the API and updates the breaks and meeting data of the user, in order to adjust to changes during the day. The notification send by the Break Scheduler will be adjusted accordingly.
+Each minute the Break Scheduler will send a request to the API and update the user's breaks and meeting data to adjust to changes during the day. The notification sent by the Break Scheduler will be adjusted accordingly.
 
 \subsection{Database} \label{database}
-As already described, the database is a simple SQLite database, which is suitable due to the fact that all information is saved locally on the users machine, which reduces data privacy issues. The database considers of different tables as shown in figure .........
+As already described, the database is a simple SQLite database, which is suitable since all information is saved locally on the user's machine, which reduces data privacy issues. The database considers different tables as shown in figure .........
 
 -------------------- add DB visualisation  -----------------------
 
-The tables Activity, Category, and Settings are actively used by the Break Scheduler to generate the new Breaks, while the table for the Break reports and the Morning and Evening reports are stored to show them to the user. The Logs and the Break table are currently only used for analysis purposes for the User study.
+The Break Scheduler actively uses Activity, Category, and Settings tables to generate new Breaks. In contrast, the table for the Break reports and the Morning and Evening reports are stored to show them to the user. The Logs and the Break table are currently only used for analysis purposes for the User study.
 
 
 \begin{comment}
-
-morning and evening report
-Each morning the user will be asked to rate their current energy rate, which will be a measure of the personal resources available for the rest of the day.  At the end of the day, each user will be asked how much energy he used during this day, which should be a measure to visualise the used personal resources. The term energy was used instead of personal resources as many users find it difficult to rate their personal resources and easier to rate their current energy on a scale from 0 to 100. These morning and evening reflections should enable users to find specific patterns between their resources and well-being. For example: If you use more energy during the day than in the morning, you could get sick after some days as you continuously overstep your personal boundaries. This data is additional self-reflection material which is not yet included in the rule-based system of the break scheduler but will be shown in the dashboard of the tool to enable the user to overview their personal resources and used resources during the day.
-
-
-In addition to the used energy, the evening report will also ask about the break duration and the break interval. For both, the break duration and the break interval, the user has three selections each: Good, too long or too short. When a break duration or interval got the rating "good", the time will not change. If it was too long or too short the time will be adjusted by a percentage of the existing time. More is explained in the implementation of the rule-based system.
-
-
-
-
-
-As the goal of this thesis is to raise awareness of their break habits as well as enable the user to find beneficial activities, the solution uses self-reported input data. 
-The goal of this work is to develop a personalized break planner that supports users in finding the opportune time with a focus on the activities, to develop good/effective break habits. The emphasis is to support the user in analysing his break preferences and not on dictating the "best schedule" and should leave room for flexibility during the day.
-
-
 
 %Nun sollte ein (separates) Implementation-Kapitel folgen (ich glaube das hast du in 4.0.1 vorgesehen). Hier kannst du beschreiben, wie du die Key-Konzepte effektiv implementiert hast.
 \textcolor{red}{all not yet finished an don't know what to say here}
@@ -659,27 +619,12 @@ The goal of this work is to develop a personalized break planner that supports u
 - Description of the software's features and functionalities
 - Explanation of the software's design and development process
 
-For the implementation of the Break Planner, it was important that it will run on the user's laptop and that all data can be saved locally on the laptop itself, so only the user has full control over their data and data privacy issues can reduce. In order to realise the Break Planner, a Desktop application was preferred that is able to run on different operating systems without a lot of extra effort. Therefore an Electron app was built using typescript. The database of the Break Scheduler is a simple sqlite3 database which will constantly be updated during the use of the application. 
-
-
-    
-
-\section{Procedure}
-One of the first steps before starting with the implementation was to define the concept of the Break Planner. Supporting the definition of the goals of this tool, the first step was to define the main objectives. During the related work phase, it becomes apparent, that there are a lot of studies focusing on the break time and the duration, but only a few studies are looking at the break activity. Additionally,  whereas there are a lot of different tools to plan static breaks which only consider the timing and duration, no tool could be found, which helps a user to find good breaks beneficial to their energy, attention and physical well-being. Therefore the following 3 Key objectives were defined for the Break Planner:
-
-•	Improve awareness of users on their existing break habits and their effectiveness
-•	Enable users to self-reflect on their personal resources, such as attention, energy and physical well-being.
-•	Empower users to identify good break activities that restore their personal resources
-
-After the high-level concept was done, the requirements were defined and the customer flow was analyzed (Add pictures here).
-
-
 \end{comment}
 
 
 \chapter{Methodology}
 %Dann folgt ein Preliminary Evaluation Chapter: hier beschreibst du zunächst die Methode und anschliessend Resultate
-This chapter describes the method and procedure used in this user study to answer the effectiveness of the Break Scheduler application in raising awareness of personal resources and enabling users to learn more about their break habits. This section provides a detailed explanation of the sample selection, study design, data collection procedures, and data analysis methods used to answer the research questions stated in the introduction, enabling the reader to reproduce the experiments when needed. The following subchapters provide more information on each aspect of the methodology.
+This chapter describes the method and procedure used in this user study to answer the effectiveness of the Break Scheduler application in raising awareness of personal resources and enabling users to learn more about their break habits. This section provides a detailed explanation of the sample selection, study design, data collection procedures, and data analysis methods used to answer the research questions stated in the introduction, enabling the reader to reproduce the experiments when needed. The following sub chapters provide more information on each aspect of the methodology.
 
 \section{Participants}
 \begin{comment} 
@@ -696,7 +641,7 @@ From pre-Q:
 - and most of them can choose their work location most of the time or sometimes
 - their work environments are open mined concerning breaks at the workplace
 \end{comment}
- The study includes a sample of 13 knowledge workers with different backgrounds (students and employees) working in various industries, ranging from IT, chemistry, and mathematics to education, aged 20-40, living and working in the German-speaking part of Switzerland. The recruiting was done by word-of-mouth approach. Each participant was asked to participate with their main work laptop/computer as the application needed to be incorporated into their daily work. As the Break Scheduler is a desktop application, the participants needed to be able to install this application on their device, which already pre-eliminated people who were not allowed by their employers to download specific applications on their work machines. Within this sample group, all three main operating systems ( macOS, Windows and Linux) were represented, eliminating the exclusion risks of certain groups of knowledge workers.
+ The study includes a sample of 13 knowledge workers with different backgrounds (students and employees) working in various industries, ranging from IT, chemistry, and mathematics to education, aged 20-40, living and working in the German-speaking part of Switzerland. The recruiting was done by word-of-mouth approach. Each participant was asked to participate with their main work laptop/computer as the application needed to be incorporated into their daily work. As the Break Scheduler is a desktop application, the participants needed to be able to install this application on their device, which already pre-eliminated people who were not allowed by their employers to download specific applications on their work machines. Within this sample group, all three main operating systems ( macOS, Windows and Linux) were represented, eliminating the exclusion risks of certain groups of knowledge workers. During the process of the user study, one participant dropped out of the study due to some technical issues while using the Break Scheduler on her work machine. The data generated by this user is therefore excluded from the results.
 
 \section{Study Design}
 \begin{comment} 
