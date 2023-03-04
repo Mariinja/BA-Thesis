@@ -28,6 +28,9 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{comment}
 \RequirePackage[most]{tcolorbox}
+\RequirePackage{multirow}		
+\RequirePackage{color, colortbl}
+\definecolor{Gray}{gray}{0.9}
 
 
 %% paper dimensions and lengths
