@@ -31,6 +31,9 @@
 \RequirePackage{multirow}		
 \RequirePackage{color, colortbl}
 \definecolor{Gray}{gray}{0.9}
+\RequirePackage{pdfpages}
+\RequirePackage{hyperref}
+\RequirePackage[bottom]{footmisc}
 
 
 %% paper dimensions and lengths
@@ -306,8 +309,8 @@
   \chapter*{Abstract}}
   {}
 
-\newenvironment{Summary}{%
-  \chapter*{Summary}}{}
+\newenvironment{Zusammenfassung}{%
+  \chapter*{Zusammenfassung}}{}
 
 \newenvironment{acknowledgements}{%
   \chapter*{Acknowledgements}}{}
